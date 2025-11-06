@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>👨‍💼 Mitarbeiterübersicht (HR-System)</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th>Geburtsdatum</th>
+        <th>Abteilung</th>
+        <th>Position</th>
+        <th>Arbeitszeit</th>
+        <th>Adresse</th>
+        <th>Versicherung</th>
+        <th>Auto</th>
+        <th>Raum</th>
+        <th>Gehalt (€)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let m of mitarbeiterList()">
+        <td>{{ m.id }}</td>
+        <td>{{ m.vorname }}</td>
+        <td>{{ m.nachname }}</td>
+        <td>{{ m.geburtsdatum }}</td>
+        <td>{{ m.abteilung.name }}</td>
+        <td>{{ m.position.titel }}</td>
+        <td>{{ m.arbeitszeit.bezeichnung }}</td>
+        <td>{{ m.adresse.strasse }}, {{ m.adresse.plz }} {{ m.adresse.stadt }}, {{ m.adresse.land }}</td>
+        <td>
+          {{ m.versicherung.name }}<br />
+          <small>{{ m.versicherung.typ }} (gültig bis: {{ m.versicherung.gueltig_bis }})</small>
+        </td>
+        <td>{{ m.auto.modell }} ({{ m.auto.kennzeichen }})</td>
+        <td>{{ m.raum.name }}<br /><small>{{ m.raum.kapazitaet }} Plätze</small></td>
+        <td>{{ m.gehalt | number:'1.0-0' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
