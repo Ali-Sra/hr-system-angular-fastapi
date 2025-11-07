@@ -2,6 +2,7 @@
   <img src="https://raw.githubusercontent.com/Ali-Sra/hr-system-angular-fastapi/main/backend/erd-diagram.png" width="850" alt="ERD Diagram">
 </p>
 
+
 # 🧩 HR-System Angular + FastAPI – Version 1.0.0
 
 Ein vollständiges HR-Verwaltungssystem mit **Angular 17** (Frontend) und **FastAPI + SQLAlchemy** (Backend).  
